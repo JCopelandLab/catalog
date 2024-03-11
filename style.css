@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+#main-container {
+  border: solid 2px red;
+}
+
+#header {
+  border: solid 2px blue;
+}
+
+#side-nav {
+  border: 2px solid green;
+}
+
+#section {
+  border: 2px solid slateblue;
+}
+
+.profile-img {
+  border-radius: 50% 50%;
+  height: 3rem;
+  width: 3rem;
+}
