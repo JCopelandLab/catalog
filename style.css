@@ -1,5 +1,6 @@
-body {
+* {
   margin: 0;
+  padding: 0;
 }
 
 #main-container {
@@ -18,8 +19,27 @@ body {
   border: 2px solid slateblue;
 }
 
-.profile-img {
+img {
   border-radius: 50% 50%;
   height: 3rem;
   width: 3rem;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.teammate {
+  display: flex;
+  align-items: center;
+}
+
+.project,
+#announcements,
+#team {
+  border: 1px solid black;
+  border-radius: 5px 5px;
 }
