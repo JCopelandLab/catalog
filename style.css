@@ -1,18 +1,21 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Norse";
+  font-family: "Poppins", Cambria, Cochin, Georgia, Times, "Times New Roman",
+    sans-serif;
+  box-sizing: border-box;
+  user-select: none;
 }
 
 /*mobile screen compatible*/
-@media (min-width: 576px) {
+@media (min-width: 375px/*576px*/) {
   img {
     border-radius: 50% 50%;
     height: 3rem;
     width: 3rem;
   }
 
-  ul {
+  #side-nav ul {
     margin: 5px 5px 5px 12px;
     list-style: none;
     font-size: 25px;
@@ -45,13 +48,14 @@
     padding: 5px 5px 10px 15px;
   }
 
-  form {
+  #header form {
     display: flex;
     justify-content: flex-start;
     align-items: center;
   }
 
-  input {
+  #header input,
+  #ccForm input {
     border: none;
     background-color: rgb(210, 226, 226);
     border-radius: 45px 45px;
@@ -75,11 +79,11 @@
     margin-left: 5px;
   }
 
-  button {
+  #header button {
     padding: 5px 10px;
     border-radius: 45px 45px;
     border: none;
-    background-color: chocolate;
+    background-color: #ffd700;
     font-weight: 600;
     font-size: 18px;
     margin-right: 15px;
@@ -88,9 +92,9 @@
 
   #side-nav {
     grid-row: 1 / 3;
-    background-color: chocolate;
+    background-color: #ffd700;
     display: grid;
-    grid-template-rows: 150px auto auto;
+    grid-template-rows: 120px auto auto;
   }
 
   #logo {
@@ -100,6 +104,81 @@
     align-items: center;
     justify-content: center;
     margin: 5px 0 75px 0;
+  }
+
+  #popup-container {
+    width: 100%;
+    background: #456294;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .show-popup {
+    height: 100vh;
+    display: flex;
+    visibility: visible;
+    transform: translate(0%, 0%) scale(1);
+    transition: 0.7s;
+    opacity: 1;
+    transition: 0.7s;
+  }
+
+  .hide-popup {
+    display: flex;
+    height: 0;
+    transform: translate(30%, -45%) scale(0.1);
+    opacity: 0;
+    transition: 0.7s;
+  }
+
+  .active {
+    filter: blur(20px);
+    pointer-events: none;
+  }
+
+  #popup {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    padding: 0 30px 30px;
+    color: #333;
+    text-align: center;
+  }
+
+  #submit-btn {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #ffd700;
+    color: #333;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 15px 5px rgba(red, green, blue, 0.2);
+  }
+
+  #svg-container {
+    width: 100px;
+    margin-top: -30px;
+    margin-left: 120px;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px 5px rgba(red, green, blue, 2);
+  }
+
+  #ccForm {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+
+  #ccForm label {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 30px 0 10px;
   }
 
   #projects-container,
@@ -115,7 +194,10 @@
   #projects,
   #ann-te {
     display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(80px));
+    grid-template-rows: repeat(
+      auto-fill,
+      minmax(80px)
+    ); /*undefined max alows content to conform to text*/
     grid-template-columns: repeat(auto-fill, minmax(427px, 500px));
     gap: 25px;
   }
@@ -123,7 +205,7 @@
   .project,
   #announcements,
   #team {
-    border-left: 5px solid chocolate;
+    border-left: 5px solid #ffd700;
     border-radius: 5px 5px;
     box-shadow: 1px 2px 8px 2px;
     margin: 10px 0px 10px 0px;
