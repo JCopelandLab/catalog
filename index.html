@@ -9,69 +9,13 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="main-container">
-      <div id="header">
-        <form action="url" method="get">
-          <label for="search"
-            ><span
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="2em"
-                height="2em"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="black"
-                  d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5q0-1.875-1.312-3.187T9.5 5Q7.625 5 6.313 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14"
-                /></svg></span
-          ></label>
-          <input
-            type="text"
-            id="search"
-            name="search_field"
-            placeholder="search projects"
-          />
-        </form>
-        <div id="header-settings">
-          <span
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="2em"
-              height="2em"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="black"
-                d="M8.645 20.5a3.502 3.502 0 0 0 6.71 0zM3 19.5h18v-3l-2-3v-5a7 7 0 1 0-14 0v5l-2 3z"
-              /></svg
-          ></span>
-          <span
-            ><img class="profile-img" alt="huey" src="./images/huey.jpeg"
-          /></span>
-          <span><h3>Jermaine Copeland</h3></span>
-        </div>
-        <div id="header-profile">
-          <img class="profile-img" src="./images/huey.jpeg" alt="huey" />
-          <div id="profile-greet">
-            <h4>Hi there,</h4>
-            <span id="username">
-              <h2>Jermaine Copeland</h2>
-              <h4>(HAUS)</h4></span
-            >
-          </div>
-        </div>
-        <div id="create-btns">
-          <span id="buttons">
-            <button id="new-btn" class="btn" onclick="openPopup()">Create</button>
-            <button id="upload-btn" class="btn">Upload</button>
-        </div>
-      </div>
+    <div id="main-container" class="">
       <div id="side-nav">
         <div id="logo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="1.5em"
-            height="1.5em"
+            width="2.5em"
+            height="2.5em"
             viewBox="0 0 24 24"
           >
             <path
@@ -79,7 +23,7 @@
               d="M13 9V3h8v6zM3 13V3h8v10zm10 8V11h8v10zM3 21v-6h8v6zm2-10h4V5H5zm10 8h4v-6h-4zm0-12h4V5h-4zM5 19h4v-2H5zm4-2"
             />
           </svg>
-          <span id="logo-text">Dashboard</span>
+          <span id="logo-text">Library Dashboard</span>
         </div>
         <div id="nav-options">
           <ul>
@@ -231,7 +175,65 @@
         </div>
       </div>
 
-      <div id="main-page">
+
+
+      <div id="main-page"> <div id="header">
+        <form action="url" method="get">
+          <label for="search"
+            ><span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="black"
+                  d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5q0-1.875-1.312-3.187T9.5 5Q7.625 5 6.313 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14"
+                /></svg></span
+          ></label>
+          <input
+            type="text"
+            id="search"
+            name="search_field"
+            placeholder="search projects"
+          />
+        </form>
+        <div id="header-settings">
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2em"
+              height="2em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="black"
+                d="M8.645 20.5a3.502 3.502 0 0 0 6.71 0zM3 19.5h18v-3l-2-3v-5a7 7 0 1 0-14 0v5l-2 3z"
+              /></svg
+          ></span>
+          <span
+            ><img class="profile-img" alt="huey" src="./images/huey.jpeg"
+          /></span>
+          <span><h3>Jermaine Copeland</h3></span>
+        </div>
+        <div id="header-profile">
+          <img class="profile-img" src="./images/huey.jpeg" alt="huey" />
+          <div id="profile-greet">
+            <h4>Hi there,</h4>
+            <span id="username">
+              <h2>Jermaine Copeland</h2>
+              <h4>(HAUS)</h4></span
+            >
+          </div>
+        </div>
+        <div id="create-btns">
+          <span id="buttons">
+
+            <button type="button" id="new-btn" class="btn" onclick="toggleCardOn()">New Book</button>
+            <!-- <button type="button" id="upload-btn" class="btn">Remove</button> -->
+        </div>
+      </div>
 
         <div id="popup-container" class="hide-popup">
         
@@ -240,269 +242,73 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 512 512">
               <path fill="#ffd700" d="M400 48H112a64.07 64.07 0 0 0-64 64v288a64.07 64.07 0 0 0 64 64h288a64.07 64.07 0 0 0 64-64V112a64.07 64.07 0 0 0-64-64m-35.75 138.29l-134.4 160a16 16 0 0 1-12 5.71h-.27a16 16 0 0 1-11.89-5.3l-57.6-64a16 16 0 1 1 23.78-21.4l45.29 50.32l122.59-145.91a16 16 0 0 1 24.5 20.58" />
             </svg></div>
-            <form id="ccForm" action="#url" method="post">
-            <label for="card-name">Name</label>
-            <input type="text" name="cardName" id="card-name">
 
-            <label for="card-description">Description</label>
-            <input type="text" name="cardDescription" id="card-description">
+            <form id="form" action="#url" method="post">
+              <h2 id="popupHeader">Create Book Card</h2>
+              <div id="inputContainer">
+            <input type="text" name="cardAuthor" id="card-author" placeholder="Author" required>
+            <input type="text" name="cardName" id="card-name" placeholder="Title" required>
+            <input type="number" name="cardPages" id="card-pages" max="800" placeholder="Pages" required>
+              </div>
+
+              <div id="checkboxContainer">
+            <h3>Have you read it?</h3>
+            <input title="hidden box" id="hiddenBox" type="hidden" name="hiddenBox"  value="Not read" >
+            <input title="visible box" id="visBox" class="visCheckBox" type="checkbox" name="visibleBox"  value="Read" >
+              </div>
+              <input type="submit" id="submit-btn" onclick=""></div>        
           </form>
-          <button type="button" id="submit-btn" onclick="closePopup()">Submit</button></div>        
         </div>
 
+<div id="dashboard">
+  
         <div id="projects-container">
-          <h2 class="section-label">Projects</h2>
+          <h2 class="section-label">Library Portal</h2>
           <div id="projects">
 
-            <div id="project-1" class="project">
-              <h3>Project 1</h3>
-              <p>
+            <div id="project" class="project">
+              <h3 id="title">The Story of Dune</h3>
+              <span><strong>Adgar H. Allen</strong></span>
+              <p id="description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
                 dolor assumenda quo possimus ea animi.
               </p>
-              <div class="buttons">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
-                  /></svg
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="M23 10a2 2 0 0 0-2-2h-6.32l.96-4.57c.02-.1.03-.21.03-.32c0-.41-.17-.79-.44-1.06L14.17 1L7.59 7.58C7.22 7.95 7 8.45 7 9v10a2 2 0 0 0 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73zM1 21h4V9H1z"
-                  /></svg
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="m21 12l-7-7v4C7 10 4 15 3 20c2.5-3.5 6-5.1 11-5.1V19z"
-                  />
-                </svg>
+              <p><i><strong>132 pages</strong></i></p>
+
+              <div id="buttons">
+                  <svg fill="black" type="button" id="deleteToggle" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.75 3V1.5h4.5V3zm-1.5 0V1a1 1 0 0 1 1-1h5.5a1 1 0 0 1 1 1v2h2.5a.75.75 0 0 1 0 1.5h-.365l-.743 9.653A2 2 0 0 1 11.148 16H4.852a2 2 0 0 1-1.994-1.847L2.115 4.5H1.75a.75.75 0 0 1 0-1.5zm-.63 1.5h8.76l-.734 9.538a.5.5 0 0 1-.498.462H4.852a.5.5 0 0 1-.498-.462z" clip-rule="evenodd" />
+                  </svg>
+
+                  <svg fill="green" type="button" id="readToggle" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                    <path  d="M6.012 18H21V4c0-1.103-.897-2-2-2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.806 5 19s.55-.988 1.012-1M8 9h3V6h2v3h3v2h-3v3h-2v-3H8z" />
+                  </svg>
               </div>
             </div>
 
-
-            <div id="project-2" class="project">
-              <h3>Project 2</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                dolor assumenda quo possimus ea animi.
+            <div id="project" class="project">
+              <h3 id="title">Clouds Sing</h3>
+              <span><strong>Ryan Wiser</strong></span>
+              <p id="description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur aut modi tempore nihil alias iure atque adipisci autem ipsam, in perferendis ea quam at reiciendis!
               </p>
-              <div class="buttons">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
-                  /></svg
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="M23 10a2 2 0 0 0-2-2h-6.32l.96-4.57c.02-.1.03-.21.03-.32c0-.41-.17-.79-.44-1.06L14.17 1L7.59 7.58C7.22 7.95 7 8.45 7 9v10a2 2 0 0 0 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73zM1 21h4V9H1z"
-                  /></svg
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="m21 12l-7-7v4C7 10 4 15 3 20c2.5-3.5 6-5.1 11-5.1V19z"
-                  />
-                </svg>
+              <p><i><strong>400 pages</strong></i></p>
+
+              <div id="buttons">
+                  <svg fill="black" type="button" id="deleteToggle" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.75 3V1.5h4.5V3zm-1.5 0V1a1 1 0 0 1 1-1h5.5a1 1 0 0 1 1 1v2h2.5a.75.75 0 0 1 0 1.5h-.365l-.743 9.653A2 2 0 0 1 11.148 16H4.852a2 2 0 0 1-1.994-1.847L2.115 4.5H1.75a.75.75 0 0 1 0-1.5zm-.63 1.5h8.76l-.734 9.538a.5.5 0 0 1-.498.462H4.852a.5.5 0 0 1-.498-.462z" clip-rule="evenodd" />
+                  </svg>
+
+                  <svg fill="green" type="button" id="readToggle" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                    <path  d="M6.012 18H21V4c0-1.103-.897-2-2-2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.806 5 19s.55-.988 1.012-1M8 9h3V6h2v3h3v2h-3v3h-2v-3H8z" />
+                  </svg>
               </div>
             </div>
 
-            <div id="project-3" class="project">
-              <h3>Project 3</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
-                natus minima possimus officiis iusto deleniti?
-              </p>
-              <div class="buttons">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
-                  /></svg
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="M23 10a2 2 0 0 0-2-2h-6.32l.96-4.57c.02-.1.03-.21.03-.32c0-.41-.17-.79-.44-1.06L14.17 1L7.59 7.58C7.22 7.95 7 8.45 7 9v10a2 2 0 0 0 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73zM1 21h4V9H1z"
-                  /></svg
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="m21 12l-7-7v4C7 10 4 15 3 20c2.5-3.5 6-5.1 11-5.1V19z"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <div id="project-4" class="project">
-              <h3>Project 4</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                veritatis illo, nihil asperiores voluptates ratione!
-              </p>
-              <div class="buttons">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
-                  /></svg
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="M23 10a2 2 0 0 0-2-2h-6.32l.96-4.57c.02-.1.03-.21.03-.32c0-.41-.17-.79-.44-1.06L14.17 1L7.59 7.58C7.22 7.95 7 8.45 7 9v10a2 2 0 0 0 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73zM1 21h4V9H1z"
-                  /></svg
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="m21 12l-7-7v4C7 10 4 15 3 20c2.5-3.5 6-5.1 11-5.1V19z"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <div id="project-5" class="project">
-              <h3>Project 5</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-                hic voluptatem quis saepe, aperiam dolor.
-              </p>
-              <div class="buttons">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
-                  /></svg
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="M23 10a2 2 0 0 0-2-2h-6.32l.96-4.57c.02-.1.03-.21.03-.32c0-.41-.17-.79-.44-1.06L14.17 1L7.59 7.58C7.22 7.95 7 8.45 7 9v10a2 2 0 0 0 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73zM1 21h4V9H1z"
-                  /></svg
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="m21 12l-7-7v4C7 10 4 15 3 20c2.5-3.5 6-5.1 11-5.1V19z"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <div id="project-6" class="project">
-              <h3>Project 6</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus odit exercitationem, labore illo nesciunt facere.
-              </p>
-              <div class="buttons">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
-                  /></svg
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="M23 10a2 2 0 0 0-2-2h-6.32l.96-4.57c.02-.1.03-.21.03-.32c0-.41-.17-.79-.44-1.06L14.17 1L7.59 7.58C7.22 7.95 7 8.45 7 9v10a2 2 0 0 0 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73zM1 21h4V9H1z"
-                  /></svg
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="m21 12l-7-7v4C7 10 4 15 3 20c2.5-3.5 6-5.1 11-5.1V19z"
-                  />
-                </svg>
-              </div>
             </div>
           </div>
-        </div>
-        <div id="ann-te">
+
+        <div id="announce-team">
           <div id="announcements-container">
             <h2 class="section-label">Announcements</h2>
             <div id="announcements">
@@ -562,6 +368,9 @@
             </div>
           </div>
         </div>
+      </div>
+
+      </div>
       </div>
     </div>
   </body>
