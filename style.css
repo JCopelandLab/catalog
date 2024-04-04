@@ -83,7 +83,7 @@
   }
 
   #header-settings,
-  #create-btns {
+  #create-btn {
     display: flex;
     align-items: center;
     justify-content: flex-end;

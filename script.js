@@ -1,69 +1,94 @@
 "use-strict";
-// buttons relative to card creation and  its deletion //
-const create_btn = document.getElementById("new-btn");
-const cardButtons = document.getElementById("buttons"); // card buttons container
-const delete_Btn = document.querySelectorAll("#deleteToggle");
-const read_btn = document.querySelectorAll("#readToggle");
-
+const library = [];
+////////////////////////////////////////////////////////////////////////////////////////////
 // toggle read button colors
-read_btn.forEach(function (item, index, array) {
+const readBtns = Array.from(document.querySelectorAll("#readBtn"));
+readBtns.forEach(function (item) {
   item.addEventListener("click", function () {
     item.getAttribute("fill") == "red"
-      ? item.setAttribute("fill", "green")
-      : item.setAttribute("fill", "red");
+      ? item.setAttribute("fill", "green") & item.setAttribute("value", "Yes")
+      : item.setAttribute("fill", "red") & item.setAttribute("value", "No");
   });
 });
-
+///////////////////////////////////////////////////////////////////////////////////////////
 // delete button to remove card
-delete_Btn.forEach(function (item, index, array) {
+const deleteBtns = Array.from(document.querySelectorAll("#deleteBtn"));
+deleteBtns.forEach(function (item, index) {
   item.addEventListener("click", function () {
     item.parentElement.parentElement.remove();
   });
 });
 ///////////////////////////////////////////////////////////////////////////////////////////
-//show popup function for new book button//
-const popupContainer = document.getElementById("popup-container");
-function toggleCardOn() {
-  popupContainer.classList.add("show-popup");
-  popupContainer.classList.remove("hide-popup");
-}
+//the hidden input form classList
+const newBookBtn = document.getElementById("new-btn");
+const popupContainer = document.getElementById("popup-container").classList;
 
-////////////////////////////////////////////////////////////////////////////////////////////
-//form to bookCard construction
-const form = document.getElementById("form");
-let author, title, pages;
-const userAuthor = document.getElementById("card-author");
-const userTitle = document.getElementById("card-name");
-const userPageCount = document.getElementById("card-pages");
-const Library = [];
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  author = userAuthor.value;
-  console.log(author);
+//reveal input
+newBookBtn.addEventListener("click", function () {
+  if (popupContainer.contains("hide-popup")) {
+    popupContainer.remove("hide-popup") & popupContainer.add("show-popup");
+  }
 });
-
-function book(author, title, pages) {
-  this.author = author;
+////////////////////////////////////////////////////////////////////////////////////////////
+//variables linked to form and its inputs
+let authorGlobal, titleGlobal, pagesGlobal;
+const form = document.getElementById("form");
+const userAuthorInput = document.getElementById("card-author");
+const userTitleInput = document.getElementById("card-name");
+const userPagesInput = document.getElementById("card-pages");
+//////////////////////////////////////////////////////////////////////////////////////////
+//find checked radio button
+const userReadInput = Array.from(document.getElementsByName("toggleRadio"));
+function readProcessor() {
+  for (let i = 0; i < userReadInput.length; i++) {
+    if (userReadInput[i].checked) {
+      return userReadInput[i].value;
+    }
+  }
+}
+///////////////////////////////////////////////////////////////////////////////////////////
+//projectS container and project framework
+const projects = document.getElementById("projects")
+const project = document.getElementById("project");
+//cdynamically create each objects(in array) html content
+function createProjectObject() {
+  library.forEach((obj) => {
+    let title = document.
+  });
+}
+///////////////////////////////////////////////////////////////////////////////////////////
+//object for object constructor calls
+function createCard(author, title, pages, read) {
+  this.author = author.value;
+  this.title = title.value;
+  this.pages = pages.value;
+  this.read = read;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
-// practicing object constructors
-/*
-function bookCatalog(author, title, pages) {
-  this.author = author;
-  this.title = title;
-  this.pages = pages;
+//submitBtn sequence
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
 
-  this.test = function () {
-    return this.author;
-  };
-}
+  const formData = new createCard(
+    userAuthorInput,
+    userTitleInput,
+    userPagesInput,
+    readProcessor()
+  );
 
-const book1 = new bookCatalog("James Lee. Powh", "HixenVille", 222);
-console.log(book1.pages);
-console.log(book1.test());
-Object.getPrototypeOf(book1); //log it === bookCatalog.protoype ??
-book1.valueOf();
-// USE: Object.setPrototypeOf(book1.prototype, bookCatalog.prototype)
-// NOT: Enemy.prototype = Person.prototype;
-*/
+  library.unshift(formData);
+
+  createProjectObject();
+
+  if (popupContainer.contains("show-popup")) {
+    popupContainer.remove("show-popup") & popupContainer.add("hide-popup");
+    form.reset();
+  }
+});
+
+// The project Library:: REcommended Steps
+//1> Create a function that loops the library array and dynamically creates the UI content for the userInput
+
+//2> Make the delete button remove the indexed item from the array and update the display
+// associate your DOM elements with the actual book objects in some way.
+// One easy solution is giving them a data-attribute that corresponds to the index of the library array.

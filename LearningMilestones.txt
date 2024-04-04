@@ -1,0 +1,14 @@
+Forms:
+<input type="Submit"> VS <button type="Submit">: These buttons have multi functionality.
+When pressed, data is sent to the server side and automatically refreshs the page thus data in the UI/window is lost.Thus disabling any JS functions/variables constructed on their basis. This feature can be disabled with; event.preventDefault()
+*Differences between <button> and <input type="button">
+
+JavaScript:
+*Dynamically create div elements
+LINK[https://www.geeksforgeeks.org/how-to-dynamically-create-new-elements-in-javascript/]
+
+*Dynamically create SVG elements
+LINK[https://www.motiontricks.com/creating-dynamic-svg-elements-with-javascript/]
+
+SVG (buttons):
+move the fill attribute out of the path element and into the SVG tag
