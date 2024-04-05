@@ -148,6 +148,15 @@
     font-size: 20px;
   }
 
+  textarea {
+    resize: none;
+    padding: 5px;
+    background-color: rgb(210, 226, 226);
+    border-radius: 10px 10px;
+    border: none;
+    box-shadow: 0 5px 20px 5px rgba(red, green, blue, 0.2);
+  }
+
   #checkboxContainer {
     display: flex;
     text-wrap: nowrap;
@@ -233,6 +242,12 @@
     border-radius: 6px;
     cursor: pointer;
     box-shadow: 0 15px 5px rgba(red, green, blue, 0.2);
+  }
+
+  #authorName,
+  #pageCount {
+    font-weight: 700;
+    font-style: italic;
   }
 
   .deleteToggle *:hover {

@@ -256,14 +256,29 @@
                   id="card-author"
                   placeholder="Author"
                   required
+                  maxlength="20"
                 />
+
                 <input
                   type="text"
                   name="cardName"
                   id="card-name"
                   placeholder="Title"
                   required
+                  maxlength="30"
                 />
+
+                <textarea
+                  form="form"
+                  name="description"
+                  id="description"
+                  cols="30"
+                  rows="10"
+                  maxlength="200"
+                  required
+                  placeholder="summary"
+                ></textarea>
+
                 <input
                   type="number"
                   name="cardPages"
@@ -305,14 +320,12 @@
             <div id="projects">
               <div id="project" class="project">
                 <h3 id="title">Websters Dictionary</h3>
-                <span id="authorName"><strong>Noah Webster</strong></span>
+                <span id="authorName">Noah Webster</span>
                 <p id="description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
                   dolor assumenda quo possimus ea animi.
                 </p>
-                <p id="pageCount">
-                  <i><strong>960 pages</strong></i>
-                </p>
+                <p id="pageCount">960 pages</p>
 
                 <div id="buttons">
                   <svg
