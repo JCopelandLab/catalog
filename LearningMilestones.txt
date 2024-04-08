@@ -1,14 +1,55 @@
-Forms:
+[Forms:
 <input type="Submit"> VS <button type="Submit">: These buttons have multi functionality.
 When pressed, data is sent to the server side and automatically refreshs the page thus data in the UI/window is lost.Thus disabling any JS functions/variables constructed on their basis. This feature can be disabled with; event.preventDefault()
 *Differences between <button> and <input type="button">
+]
 
-JavaScript:
+[JavaScript:
 *Dynamically create div elements
 LINK[https://www.geeksforgeeks.org/how-to-dynamically-create-new-elements-in-javascript/]
-
+*variables declared to an elements value will return undefined if not chained with the event listener function. WONT work seperately.
 *Dynamically create SVG elements
 LINK[https://www.motiontricks.com/creating-dynamic-svg-elements-with-javascript/]
+]
 
 SVG (buttons):
 move the fill attribute out of the path element and into the SVG tag
+
+
+Dynamically creating the elements with the contextual fragments approach:
+*In the beginning, the porjects were static in that they were hard coded into the HTML. I learned how to incorperate dynamic creation of this content by injecting it into the innerHTML of the parent/container div(element).
+This was feasible by collecting the data from the users form and giving it to a object constructor. Each object is fed to a library array on the eevent of submition.
+Also on submition a function is ran in which the forEach method is used to loop over every object in the array.
+I used let str = "", be my catalyst for building each objects template string. The values were dyanmically built with ${library[index].<'key'>}
+with each iteration str += had the HTML dynamically passed into it.
+str was then given to the innerHTML at the end of the iteration and the variable was cleared to prevent repeatitive use of the previous dynamically built content.
+ANOTHER METHOD:::
+
+// you can use insertAdjacentHTML method 
+
+// document.body.insertAdjacentHTML('beforebegin', str)
+
+// OR createContextualFragment methods as used below
+
+const myFragment = document.createRange().createContextualFragment(str)
+
+
+
+ document.body.appendChild(myFragment)
+
+
+
+function showMore(){
+
+if(btn.getAttribute("fill).value == "green"){
+    btn.setAttribute("fill", "red")
+} else{
+    btn.setAttribute("fill", "green")
+}
+ }
+ 
+
+ const btn = document.querySelector('#readBtn')
+ btn.addEventListener('click', showMore)
+ console.log(btn)
+
