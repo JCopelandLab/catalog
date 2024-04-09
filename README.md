@@ -1,6 +1,7 @@
 # catalog
 
 A web app dashboard built with HTML, JavaScript and CSS.
+live-preview: <a src = "https://jcopelandlab.github.io/catalog/">
 
 <hr>
 <h3>Contact Information<h3/>
