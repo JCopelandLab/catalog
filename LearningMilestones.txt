@@ -23,33 +23,9 @@ Also on submition a function is ran in which the forEach method is used to loop 
 I used let str = "", be my catalyst for building each objects template string. The values were dyanmically built with ${library[index].<'key'>}
 with each iteration str += had the HTML dynamically passed into it.
 str was then given to the innerHTML at the end of the iteration and the variable was cleared to prevent repeatitive use of the previous dynamically built content.
-ANOTHER METHOD:::
+ANOTHER METHOD::: XXX--XXX
 
-// you can use insertAdjacentHTML method 
+template literals are commonly used with react library
 
-// document.body.insertAdjacentHTML('beforebegin', str)
-
-// OR createContextualFragment methods as used below
-
-const myFragment = document.createRange().createContextualFragment(str)
-
-
-
- document.body.appendChild(myFragment)
-
-
-
-function showMore(){
-
-if(btn.getAttribute("fill).value == "green"){
-    btn.setAttribute("fill", "red")
-} else{
-    btn.setAttribute("fill", "green")
-}
- }
- 
-
- const btn = document.querySelector('#readBtn')
- btn.addEventListener('click', showMore)
- console.log(btn)
-
+validation of user inputs occur client side and sanitization occurs server side.
+Validation of every input is not working even with attributes being established.
