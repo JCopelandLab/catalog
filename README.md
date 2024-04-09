@@ -1,7 +1,7 @@
 # catalog
 
 A web app dashboard built with HTML, JavaScript and CSS.
-live-preview: <ol><li><a href= "https://jcopelandlab.github.io/catalog/">Library Dashboard<a/></li></ol>
+live-preview: <ul><li><a href= "https://jcopelandlab.github.io/catalog/">Library Dashboard<a/></li></ul>
 
 
 <hr>
