@@ -116,31 +116,29 @@
     justify-content: center;
   }
 
-  .show-popup {
-    height: 100vh;
-    display: flex;
-    transform: translate(0%, 0%) scale(1);
-    transition: 0.7s;
-    opacity: 1;
-    transition: 0.7s;
-  }
-
-  .hide-popup {
-    display: flex;
-    height: 0;
-    transform: translate(30%, -45%) scale(0.1);
-    opacity: 0;
-    transition: 0.7s;
-  }
-
   #popup {
-    width: 400px;
+    width: 300px;
     background-color: #fff;
     border-radius: 6px;
-    position: absolute;
+    position: relative;
+    margin: 25px;
     padding: 0 30px 30px;
     color: #333;
     text-align: center;
+  }
+
+  .show-popup {
+    min-height: 80vh;
+    display: flex;
+    transform: translate(0%, 0%) scale(1);
+    transition: height 0.66s ease-in-out;
+    opacity: 6;
+  }
+
+  .hide-popup {
+    display: none;
+    transform: translate(30%, -45%) scale(0.1);
+    transition: height 0.66s ease-in-out;
   }
 
   #inputContainer * {
@@ -161,14 +159,14 @@
     display: flex;
     text-wrap: nowrap;
     align-items: center;
-    justify-content: start;
+    justify-content: space-around;
     margin-top: 15px;
   }
 
   #svg-container {
     width: 100px;
     margin-top: -20px;
-    margin-left: 120px;
+    margin-left: 75px;
     border-radius: 50%;
     box-shadow: 0 5px 20px 5px rgba(red, green, blue, 0.2);
   }
@@ -200,6 +198,16 @@
     padding: 15px;
   }
 
+  #readBtnContainer {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+  }
+
+  #readIcon {
+    fill: "green";
+  }
+
   #buttons {
     display: flex;
     flex-direction: row;
@@ -211,12 +219,7 @@
     font-size: 1.5rem;
     border: none;
     background: none;
-    cursor: pointer;
     margin-right: 15px;
-  }
-
-  #new-btn {
-    width: 200px;
   }
 
   #popupHeader {
@@ -244,19 +247,19 @@
     box-shadow: 0 15px 5px rgba(red, green, blue, 0.2);
   }
 
-  #authorName,
-  #pageCount {
+  .author,
+  .pages {
     font-weight: 700;
     font-style: italic;
   }
 
-  .deleteToggle *:hover {
+  .deleteBtn :hover {
     cursor: pointer;
     transition: 0.5s;
     fill: #ffd700;
   }
 
-  #readBtn :hover {
+  .readBtn :hover {
     cursor: pointer;
   }
 

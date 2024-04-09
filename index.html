@@ -214,21 +214,21 @@
             <span
               ><img class="profile-img" alt="huey" src="./images/huey.jpeg"
             /></span>
-            <span><h3>Jermaine Copeland</h3></span>
+            <span><h3>Huey Freeman</h3></span>
           </div>
           <div id="header-profile">
             <img class="profile-img" src="./images/huey.jpeg" alt="huey" />
             <div id="profile-greet">
               <h4>Hi there,</h4>
               <span id="username">
-                <h2>Jermaine Copeland</h2>
+                <h2>Huey Freeman</h2>
                 <h4>(HAUS)</h4></span
               >
             </div>
           </div>
           <div id="create-btn">
             <button type="button" id="newBookBtn" class="btn">
-              New Bookmark
+              Create Book
             </button>
           </div>
         </div>
@@ -250,12 +250,12 @@
             </div>
 
             <form id="form" action="#url" method="post" target="_blank">
-              <h2 id="popupHeader">Enter Book Information</h2>
+              <h2 id="popupHeader">Book Information</h2>
               <div id="inputContainer">
                 <input
                   type="text"
                   name="cardAuthor"
-                  id="form-author"
+                  id="author"
                   placeholder="Author"
                   required
                   maxlength="20"
@@ -264,7 +264,7 @@
                 <input
                   type="text"
                   name="cardName"
-                  id="form-name"
+                  id="title"
                   placeholder="Title"
                   required
                   maxlength="30"
@@ -273,18 +273,18 @@
                 <textarea
                   form="form"
                   name="description"
-                  id="form-description"
-                  cols="30"
+                  id="description"
+                  cols="20"
                   rows="10"
                   maxlength="200"
                   required
-                  placeholder="summary"
+                  placeholder="description"
                 ></textarea>
 
                 <input
                   type="number"
                   name="cardPages"
-                  id="form-pages"
+                  id="pages"
                   max="10000"
                   placeholder="Pages"
                   required
@@ -293,32 +293,17 @@
 
               <div id="checkboxContainer">
                 <h3>Have you read it?</h3>
-                <input
-                  type="radio"
-                  id="notRead"
-                  name="toggleRadio"
-                  value="No"
-                  required
-                />
-                <label for="notRead">No</label>
-                <input
-                  type="radio"
-                  id="read"
-                  name="toggleRadio"
-                  value="Yes"
-                  required
-                />
-                <label for="read">Yes</label>
+                <input id="checkbox" value="yes" type="checkbox" />
               </div>
 
-              <input type="submit" id="submit-btn" onclick="" />
+              <input type="submit" id="submit-btn" />
             </form>
           </div>
         </div>
 
         <div id="dashboard">
           <div id="projects-container">
-            <h2 class="section-label">Library Portal</h2>
+            <h2 class="section-label">Library Collection</h2>
             <div id="projects"></div>
           </div>
 
@@ -327,26 +312,27 @@
               <h2 class="section-label">Announcements</h2>
               <div id="announcements">
                 <div class="announcement" id="announcement-1">
-                  <h4>Updated privacy Policy</h4>
+                  <h4>Grandads Fight</h4>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Pariatur culpa recusandae at doloremque odio possimus.
+                    Humiliated by being beaten by an elderly blind man, Granddad
+                    wants to set the record straight and tries to set up a
+                    rematch.
                   </p>
                 </div>
                 <hr />
                 <div class="announcement" id="announcement-2">
-                  <h4>Community Day</h4>
+                  <h4>Return of the King</h4>
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Quam maiores quibusdam ratione aspernatur doloribus minima.
+                    Martin Luther King, Jr. comes out of a coma in the
+                    post-September 11th era.
                   </p>
                 </div>
                 <hr />
                 <div class="announcement" id="announcement-3">
-                  <h4>Halloween Fest</h4>
+                  <h4>Stinkmeaner Strikes Back</h4>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Tempora voluptate delectus in inventore facilis accusantium?
+                    Huey has a dream of Stinkmeaner and Granddad says that he
+                    was a menace and he sent him to hell like he deserves
                   </p>
                 </div>
               </div>
@@ -359,24 +345,24 @@
                 <div id="teammate-1" class="teammate">
                   <img src="./images/grandad.jpeg" alt="" />
                   <span
-                    ><h4>@Tubi</h4>
-                    <h5>Privacy Lives</h5></span
+                    ><h4>@Robert Freeman</h4>
+                    <h5>John Witherspoon</h5></span
                   >
                 </div>
                 <hr />
                 <div id="teammate-2" class="teammate">
                   <img src="./images/woman.jpeg" alt="" />
                   <span
-                    ><h4>@Super</h4>
-                    <h5>Sailor</h5></span
+                    ><h4>@JillTalley</h4>
+                    <h5>Sarah Dubois</h5></span
                   >
                 </div>
                 <hr />
                 <div id="teammate-3" class="teammate">
                   <img src="./images/kattwilliams.jpeg" alt="" />
                   <span
-                    ><h4>@LiverKing</h4>
-                    <h5>Doctor</h5></span
+                    ><h4>@SayItWithmeNow</h4>
+                    <h5>A Pimp Named Slickback</h5></span
                   >
                 </div>
               </div>
